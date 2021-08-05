@@ -1,9 +1,20 @@
 import React from 'react';
 import {
     View,
-    Text
+    Text,
+    TouchableOpacity,
+    TouchableWithoutFeedback,
+    Image,
+    FlatList
 } from 'react-native';
-import Animated from 'react-native-reanimated';
+import Animated, {
+    useSharedValue,
+    useAnimatedStyle,
+    withTiming
+} from 'react-native-reanimated';
+import { connect } from 'react-redux';
+import { setSelectedTab } from '../redux/actions/tabAction';
+
 
 const MainLayout = ({ drawerAnimationStyle }) => {
     return (
@@ -16,6 +27,10 @@ const MainLayout = ({ drawerAnimationStyle }) => {
                 ...drawerAnimationStyle
             }}
         >
+            {/** Header */}
+
+
+            {/** Content */}
             <Text>MainLayout</Text>
         </Animated.View>
     )
